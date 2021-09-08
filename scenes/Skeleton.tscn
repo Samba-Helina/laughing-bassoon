@@ -918,12 +918,11 @@ position = Vector2( 0, -33 )
 texture = ExtResource( 1 )
 hframes = 32
 vframes = 8
-frame = 66
+frame = 6
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 45 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 process_mode = 0
 parameters/playback = SubResource( 46 )
 parameters/Attack/blend_position = Vector2( 0, 0 )
@@ -971,16 +970,19 @@ collision_layer = 14
 collision_mask = 12
 
 [node name="SwordCollision" type="CollisionPolygon2D" parent="Sword"]
+visible = false
 rotation = 4.71239
 polygon = PoolVector2Array( 0, 0, 41, -37, 66, -9.75, 66, 20.25, 50, 61.25 )
 
 [node name="SpellNode" parent="." instance=ExtResource( 3 )]
 
 [node name="BodyShape" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 1.12372, -24.3475 )
 shape = SubResource( 79 )
 
 [node name="WalkCollision" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 80 )
 __meta__ = {
 "_edit_group_": true

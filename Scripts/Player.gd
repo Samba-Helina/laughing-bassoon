@@ -70,8 +70,10 @@ func _physics_process(delta):
 
 func _unhandled_input(event):
 	var target = Vector2()
+	# If already doing a task don't do anything else
+	if(acting):
+		return
 	if(event.is_action_pressed("hotbar1")):
-		
 		pass
 	if (event.is_action_pressed("left_click")):
 		acting = true
