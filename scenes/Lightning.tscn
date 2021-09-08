@@ -1,0 +1,43 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://scenes/SpellBase.gd" type="Script" id=1]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_11.png" type="Texture" id=2]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_18.png" type="Texture" id=3]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_3.png" type="Texture" id=4]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_6.png" type="Texture" id=5]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_16.png" type="Texture" id=6]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_20.png" type="Texture" id=7]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_8.png" type="Texture" id=8]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_13.png" type="Texture" id=9]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_21.png" type="Texture" id=10]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_5.png" type="Texture" id=11]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_7.png" type="Texture" id=12]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_15.png" type="Texture" id=13]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_19.png" type="Texture" id=14]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_17.png" type="Texture" id=15]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_1.png" type="Texture" id=16]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_9.png" type="Texture" id=17]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_2.png" type="Texture" id=18]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_4.png" type="Texture" id=19]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_10.png" type="Texture" id=20]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_14.png" type="Texture" id=21]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_12.png" type="Texture" id=22]
+[ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_22.png" type="Texture" id=23]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 18 ), ExtResource( 4 ), ExtResource( 19 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 2 ), ExtResource( 22 ), ExtResource( 9 ), ExtResource( 21 ), ExtResource( 13 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 3 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "lightning",
+"speed": 30.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -68 )
+frames = SubResource( 1 )
+animation = "lightning"
+frame = 6
+playing = true

@@ -1,0 +1,24 @@
+Sää ja vuodenajat
+
+Strength
+Constitution
+Dexterity
+Charisma
+Intelligence
+Wisdom
+
+Elementti resistanssi
+
+Traumat
+Arvet
+
+Uskonto
+Veren määrä
+Verenpaine
+Etnisyys%
+Etnisyys-pohja
+Peukaloiden lukumäärä
+Käsien nopeus
+Kätisyys
+Lempi sää
+Likelyhood of buying candy at the store 0-100
