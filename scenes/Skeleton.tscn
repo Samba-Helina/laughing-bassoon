@@ -918,11 +918,12 @@ position = Vector2( 0, -33 )
 texture = ExtResource( 1 )
 hframes = 32
 vframes = 8
-frame = 6
+frame = 65
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 45 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
 process_mode = 0
 parameters/playback = SubResource( 46 )
 parameters/Attack/blend_position = Vector2( 0, 0 )
