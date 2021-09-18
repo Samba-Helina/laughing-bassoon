@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://scenes/SpellBase.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/SpellBase.gd" type="Script" id=1]
 [ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_11.png" type="Texture" id=2]
 [ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_18.png" type="Texture" id=3]
 [ext_resource path="res://assets/fx1_blue_topEffect/spell_bluetop_1_3.png" type="Texture" id=4]

@@ -30,6 +30,6 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 9 ), ExtResource( 8 ) ],
 "loop": true,
-"name": "flying",
+"name": "onAir",
 "speed": 15.0
 } ]

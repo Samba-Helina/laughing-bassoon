@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/spell_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+target = 4
+type = 2
+resource_dir = ""
+animations = "res://Spells/fireball/animation.tres"
+hitbox1 = "res://Spells/fireball/onHitCollision.tres"

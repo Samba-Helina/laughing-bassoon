@@ -22,3 +22,4 @@ Käsien nopeus
 Kätisyys
 Lempi sää
 Likelyhood of buying candy at the store 0-100
+Degeneracy

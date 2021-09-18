@@ -1,12 +1,15 @@
 extends KinematicBody2D
 
-onready var GUI
+var GUI
+
 onready var Spell = get_node("SpellNode")
 onready var animation_tree = get_node("AnimationTree")
 onready var state_machine = animation_tree.get("parameters/playback")
 
 #var Spell = preload("res://Scripts/Spell.gd")
 var newSpell;
+var Spells = [preload("res://Spells/spell_fireball.tres"), preload("res://Spells/spell_lightningBolt.tres")]
+var currSpell
 
 export (int) var speed = 200
 var acting = false
@@ -29,9 +32,25 @@ var velocity = Vector2()
 func _ready():
 	state_machine.travel("Idle")
 	#newSpell = Spell.new(Flags.CURR_TARGET.TARGET_COORD, Flags.SPELL_TYPE.PROJECTILE)
-	Spell.setCurrTarget(Flags.CURR_TARGET.TARGET_COORD)
-	Spell.setSpellType(Flags.SPELL_TYPE.PROJECTILE)
-	Spell.setEffect()
+	if(Spells.size() > 0):
+		for i in range(0, Spells.size()):
+			print("Spell ID ", i, " target ", Spells[i].target, " type ", Spells[i].type)
+			Spell.addSpell(i, load(Spells[i].animations), load(Spells[i].hitbox1))
+		currSpell = Spells[0]
+		Spell.changeSpell(0)
+		Spell.setCurrTarget(currSpell.target)
+		Spell.setSpellType(currSpell.type)
+	else:
+		Spell.setCurrTarget(Flags.CURR_TARGET.TARGET_COORD)
+		Spell.setSpellType(Flags.SPELL_TYPE.PROJECTILE)
+		Spell.setEffect()
+	
+	var GUIArr = get_tree().get_nodes_in_group("GUI")
+	if(GUIArr.size() >= 1):
+		GUI = GUIArr[0]
+		GUI.connect("changeActiveSkill", self, "changeSkill")
+	else:
+		print("No GUI connected")
 	pass
 
 func get_input():
@@ -73,7 +92,22 @@ func _unhandled_input(event):
 	# If already doing a task don't do anything else
 	if(acting):
 		return
+	# This thing needs to be optimized or changed into a switch
 	if(event.is_action_pressed("hotbar1")):
+		print("Changed to spell ", 0)
+		currSpell = Spells[0]
+		Spell.changeSpell(0)
+		print("Curr spell_type ", currSpell.type)
+		Spell.setCurrTarget(currSpell.target)
+		Spell.setSpellType(currSpell.type)
+		pass
+	if(event.is_action_pressed("hotbar2")):
+		print("Changed to spell ", 1)
+		currSpell = Spells[1]
+		Spell.changeSpell(1)
+		print("Curr spell_type ", currSpell.type)
+		Spell.setCurrTarget(currSpell.target)
+		Spell.setSpellType(currSpell.type)
 		pass
 	if (event.is_action_pressed("left_click")):
 		acting = true
@@ -105,3 +139,7 @@ func takeDamage():
 func _on_Sword_area_entered(area):
 	print("Hurrdurr")
 	pass # Replace with function body.
+
+func changeSkill(skillID):
+	
+	pass
